@@ -58,13 +58,8 @@ Chinese Subjective Dectection based on subjective knowlegebase, 基于中文主�
     content = '我喜欢你'
     score = 0.767
     *****************************
-
-<<<<<<< HEAD
 # 总结
-1）本项目以词汇知识库的方式，通过总结归纳出主观性线索词，并加以规则进行计算。
-2) 从上面的效果来看，还像是那么回事
-3) 主观性配合情感得分，相信能够在舆情分析上起到一定作用
-4）词库欢迎补充。send mail to: lhy_in_blcu@126.com
-=======
-to be finished in next 2days..
->>>>>>> 2ea243ccb5881a0fef460df69c5eb7151a140c23
+1）本项目以词汇知识库的方式，通过总结归纳出主观性线索词，并加以规则进行计算。  
+2) 从上面的效果来看，还像是那么回事，但还有提升空间。  
+3) 主观性配合情感得分，相信能够在舆情分析上起到一定作用。   
+4）词库欢迎补充。send mail to: lhy_in_blcu@126.com  
