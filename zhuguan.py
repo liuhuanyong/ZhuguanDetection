@@ -104,6 +104,6 @@ class ZhuguanDetect:
 
 if __name__ == '__main__':
     handler = ZhuguanDetect()
-    sent = '''江龙船艇：台风“山竹”造成直接经济损失400万至500万'''
+    sent = '''中华人民共和国万岁'''
     score = handler.detect(sent)
     print(score)
