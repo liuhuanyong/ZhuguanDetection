@@ -63,3 +63,5 @@ Chinese Subjective Dectection based on subjective knowlegebase, 基于中文主�
 2) 从上面的效果来看，还像是那么回事，但还有提升空间。  
 3) 主观性配合情感得分，相信能够在舆情分析上起到一定作用。   
 4）词库欢迎补充。send mail to: lhy_in_blcu@126.com  
+
+If any question about the project or me ,see https://liuhuanyong.github.io/
