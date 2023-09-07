@@ -10,21 +10,21 @@ import re
 
 class ZhuguanDetect:
     def __init__(self):
-        curdir = '/'.join(os.path.abspath(__file__).split('/')[:-1])
-        degree_file = os.path.join(curdir, 'dict/degree_words.txt')
-        deny_file = os.path.join(curdir, 'dict/deny_words.txt')
-        qingtai_file = os.path.join(curdir, 'dict/qingtai_words.txt')
-        zhuzhang_file = os.path.join(curdir, 'dict/zhuzhang_words.txt')
-        senti_file = os.path.join(curdir, 'dict/senti_words.txt')
-        pingjia_file = os.path.join(curdir, 'dict/pingjia_words.txt')
-        rencheng_file = os.path.join(curdir, 'dict/rencheng_words.txt')
-        zhishi_file = os.path.join(curdir, 'dict/rencheng_words.txt')
-        yiwen_file = os.path.join(curdir, 'dict/yiwen_words.txt')
-        lianci_file = os.path.join(curdir, 'dict/lianci_words.txt')
-        tanci_file = os.path.join(curdir, 'dict/tanci_words.txt')
-        yuqi_file = os.path.join(curdir, 'dict/yuqi_words.txt')
-        zhuangtai_file = os.path.join(curdir, 'dict/zhuangtai_words.txt')
-        nengyuan_file = os.path.join(curdir, 'dict/nengyuan_words.txt')
+        curdir = os.path.abspath(os.path.dirname(__file__))
+        degree_file = os.path.join( curdir, "dict", "degree_words.txt")
+        deny_file = os.path.join( curdir, "dict", "deny_words.txt")
+        qingtai_file = os.path.join( curdir, "dict", "qingtai_words.txt")
+        zhuzhang_file = os.path.join( curdir, "dict", "zhuzhang_words.txt")
+        senti_file = os.path.join( curdir, "dict", "senti_words.txt")
+        pingjia_file = os.path.join( curdir, "dict", "pingjia_words.txt")
+        rencheng_file = os.path.join( curdir, "dict", "rencheng_words.txt")
+        zhishi_file = os.path.join( curdir, "dict", "rencheng_words.txt")
+        yiwen_file = os.path.join( curdir, "dict", "yiwen_words.txt")
+        lianci_file = os.path.join( curdir, "dict", "lianci_words.txt")
+        tanci_file = os.path.join( curdir, "dict", "tanci_words.txt")
+        yuqi_file = os.path.join( curdir, "dict", "yuqi_words.txt")
+        zhuangtai_file = os.path.join( curdir, "dict", "zhuangtai_words.txt")
+        nengyuan_file = os.path.join( curdir, "dict", "nengyuan_words.txt")
 
         self.degree_words = self.load_words(degree_file)
         self.deny_words = self.load_words(deny_file)
@@ -42,8 +42,10 @@ class ZhuguanDetect:
         self.zhuangtai_words = self.load_words(zhuangtai_file)
 
     '''构造词典'''
-    def load_words(self, file):
-        return set([i.strip() for i in open(file) if i.strip()])
+
+    def load_words(self, file: str) -> set:
+        with open(file, encoding="utf8") as _file:
+            return set([i.strip() for i in _file if i.strip()])
 
     '''基于主观线索进行主观性分析'''
     def zhuguan(self, sent):
